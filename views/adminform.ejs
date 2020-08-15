@@ -1,0 +1,45 @@
+<html>
+<title>Form Submit</title>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	</head>
+	<body  class="container">
+
+    
+	
+	<h1>Case Form</h1>
+	<form action="/admin/<%=advocate._id%>/submit" method="POST">
+  <div class="form-group">
+    <label for="exampleInputUid">Uid</label>
+    <input type="text" name="uid" class="form-control" id="uid" aria-describedby="emailHelp" value=<%=advocate.uid%>>
+   
+  </div>
+  <div class="form-group">
+    <label for="exampleInputCid">Case Id</label>
+    <input type="text" name="cid" class="form-control" id="cid" placeholder="Case ID">
+  </div>
+   <div class="form-group">
+    <label for="exampleInputName">Case Name</label>
+    <input type="text" name="cname" class="form-control" id="cname" placeholder="Case Name">
+  </div>
+   <div class="form-group">
+    <label for="exampleInputStatus">Status</label><br>
+    <label for="won">Won</label>
+    <input type="radio" name="status" id="status" value="won">
+    <br>
+    <label for="loose">Loose</label>
+    <input type="radio" name="status" id="status" value="loose">
+    <br>
+    <label for="pending">Pending</label>
+    <input type="radio" name="status" id="status" value="pending">
+    
+  </div>
+  
+
+
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+	</body>
+</html>
